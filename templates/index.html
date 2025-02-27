@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-<title>Sensive Blog - Home</title>
+  <title>Sensive Blog - Home</title>
 {% endblock title %}
 
 {% block content %}
@@ -37,7 +37,7 @@
                 {% endif %}
               </div>
               <div class="blog__slide__content">
-                <h3><a href="#">{{ post.title }}</a></h3>
+                <h3><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
                 <p>{{ post.published_at }}</p>
               </div>
             </div>
@@ -109,8 +109,8 @@
               <h4 class="single-sidebar-widget__title">Newsletter</h4>
               <div class="form-group mt-30">
                 <div class="col-autos">
-                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email'">
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                         onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
                 </div>
               </div>
               <button class="bbtns d-block mt-20 w-100">Subcribe</button>
